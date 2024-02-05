@@ -1,0 +1,26 @@
+.container {
+    background-color: red;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 45px;
+}
+.score {
+    background-color: blue;
+    height: 200px;
+    width: 90vw;
+    margin-top: 20px;
+}
+.game {
+    background-color: aqua;
+    height: 200px;
+    width: 90vw;
+}
+.opts{
+    height: 400px;
+    background-color: coral;
+    width: 90vw;
+}
