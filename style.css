@@ -1,5 +1,4 @@
 .container {
-    background-color: red;
     height: 90vh;
     display: flex;
     flex-direction: column;
@@ -9,18 +8,92 @@
     padding: 45px;
 }
 .score {
-    background-color: blue;
+    /* background-color: blue; */
     height: 200px;
     width: 90vw;
-    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
 }
 .game {
     background-color: aqua;
-    height: 200px;
+    height: 250px;
     width: 90vw;
+    display: flex;
+    justify-content: space-around;
+    /* gap: 100px; */
+    align-items: center;
 }
-.opts{
+.opts {
     height: 400px;
     background-color: coral;
     width: 90vw;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+}
+.op {
+    margin: 20px;
+    min-width: min-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: ease-in-out 0.25s;
+    font-size: 2.5rem;
+}
+.op:hover {
+    cursor: pointer;
+    background-color: aqua;
+    transition: ease-in-out 0.5s;
+}
+.player,
+.com {
+    /* background-color: red; */
+    height: 175px;
+    width: 175px;
+}
+.pscore,
+.cscore {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+img {
+    height: 175px;
+    width: 175px;
+
+    mix-blend-mode: multiply;
+}
+.com > img {
+    transform: scaleX(-1);
+}
+.shake {
+    animation: shaking 1.5s;
+}
+@keyframes shaking {
+    0% {
+        transform: translateY(30px);
+    }
+    20% {
+        transform: translateY(-30px);
+    }
+    40% {
+        transform: translateY(30px);
+    }
+    60% {
+        transform: translateY(-30px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+.deselect {
+    opacity: 50%;
+}
+.select {
+    background-color: aqua;
+}
+.deselect:hover {
+    cursor: no-drop;
 }
